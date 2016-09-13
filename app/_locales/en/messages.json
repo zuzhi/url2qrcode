@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "url2qrcode",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "QR Code generator for URL",
+    "description": "The description of the application"
+  }
+}
