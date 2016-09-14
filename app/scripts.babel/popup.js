@@ -18,14 +18,19 @@ chrome.tabs.query({
   var tabURL = tabs[0].url;
   // console.log(tabURL);
   document.getElementById('url').value = tabURL;
-  qrcode = new QRCode(document.getElementById('qrcode'), tabURL);
+  // qrcode = new QRCode(document.getElementById('qrcode'), tabURL);
+  qrcode = new QRCode(document.getElementById('qrcode'), {
+      text: tabURL,
+      width: 128,
+      height: 128
+  });
 });
 
 function generateCode() {
-  var url = document.getElementById('url');
+  var urlArea = document.getElementById('url');
 
-  if (!url.value) {
-    url.focus();
+  if (!urlArea.value) {
+    // urlArea.focus();
     return;
   }
 

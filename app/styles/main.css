@@ -1,7 +1,7 @@
 body {
-  padding: 20px;
+  /*padding: 20px;*/
 }
 
-input {
-	width: 97.5%;
+textarea {
+	width: 122px;
 }
