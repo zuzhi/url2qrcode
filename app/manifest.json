@@ -46,5 +46,6 @@
     },
     "default_title": "url2qrcode",
     "default_popup": "popup.html"
-  }
+  },
+  "homepage_url": "https://github.com/zuzhi/url2qrcode"
 }
