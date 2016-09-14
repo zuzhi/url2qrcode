@@ -4,7 +4,7 @@
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "QR Code generator for URL",
+    "message": "A Chrome Extension reads current tab's URL and generate a QR Code",
     "description": "The description of the application"
   }
 }
