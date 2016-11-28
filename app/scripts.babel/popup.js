@@ -4,7 +4,7 @@ var qrcode;
 var urlArea = document.getElementById('url');
 
 urlArea.addEventListener('blur', function () { // listen to 'blur' event, a 'tab' will do
-  generateCode();
+  generateCode(tabURL);
 });
 // urlArea.addEventListener('keydown', function (e) {
 //   if (e.keyCode == 13) {
