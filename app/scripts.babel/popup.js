@@ -24,9 +24,13 @@ chrome.tabs.query({
   anchor.href = tabURL;
   if (anchor.hostname == 'localhost' || anchor.hostname == '127.0.0.1') {
     getLocalIPs(function(ips) { // <!-- ips is an array of local IP addresses.
-      anchor.hostname = ips[0];
-      tabURL = anchor.href;
-      generateCode(tabURL);
+      ips.forEach(function (ip) {
+          if (ip.indexOf('192.168') == 0) {
+              anchor.hostname = ip;
+              tabURL = anchor.href;
+              generateCode(tabURL);
+          }
+      });
     });
   } else { // and yes, those two tabURLs are different
     generateCode(tabURL);
@@ -68,7 +72,7 @@ function getLocalIPs(callback) {
   });
   // Add a media line, this is needed to activate candidate gathering.
   pc.createDataChannel('');
-  
+
   // onicecandidate is triggered whenever a candidate has been found.
   pc.onicecandidate = function(e) {
     if (!e.candidate) { // Candidate gathering completed.
